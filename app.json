@@ -1,0 +1,15 @@
+{
+  "name": "::Demo Application",
+  "theme": "dark",
+  "short": "::Demo",
+  "description": "::Another yao application",
+  "version": "0.10.2",
+  "menu": {
+    "process": "flows.init.menu",
+    "args": ["demo"]
+  },
+  "navigation": {
+    "hideNotification": true,
+    "hideSetting": false
+  }
+}

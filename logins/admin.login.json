@@ -1,0 +1,13 @@
+{
+  "action": {
+    "process": "yao.user.login",
+    "args": [":payload"]
+  },
+  "layout": {
+    "entry": "/x/Table/pet",
+    "captcha": "/api/user/captcha",
+    "cover": "/images/admin-cover.png",
+    "slogan": "::Make Your Dream With Yao App Engine",
+    "site": "https://yaoapps.com"
+  }
+}
