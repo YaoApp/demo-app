@@ -8,7 +8,7 @@
     "process": "flows.init.menu",
     "args": ["demo"]
   },
-  "navigation": {
+  "optional": {
     "hideNotification": true,
     "hideSetting": false
   }
