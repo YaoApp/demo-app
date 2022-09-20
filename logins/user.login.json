@@ -1,13 +1,14 @@
 {
+  "name": "::User Login",
   "action": {
     "process": "scripts.user.Login",
     "args": [":payload"]
   },
   "layout": {
-    "entry": "/x/Table/user",
-    "captcha": "/api/user/captcha",
-    "cover": "/images/admin-cover.png",
+    "entry": "/x/Table/dash",
+    "captcha": "yao.utils.Captcha",
+    "cover": "/images/user-cover.png",
     "slogan": "::Make Your Dream With Yao App Engine",
-    "site": "https://yaoapps.com"
+    "site": "https://yaoapps.com/docs"
   }
 }
