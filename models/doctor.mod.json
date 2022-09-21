@@ -1,0 +1,81 @@
+{
+  "name": "Doctor",
+  "table": { "name": "doctor", "comment": "宠物医生表" },
+  "columns": [
+    { "name": "id", "comment": "ID", "type": "ID" },
+    {
+      "name": "name",
+      "comment": "名称",
+      "type": "string",
+      "length": 80,
+      "index": true,
+      "nullable": true
+    },
+    {
+      "name": "nickname",
+      "comment": "昵称",
+      "type": "string",
+      "length": 80,
+      "index": true,
+      "nullable": true
+    },
+    {
+      "name": "title",
+      "comment": "职级",
+      "type": "enum",
+      "option": [
+        "实习医师",
+        "初级医师",
+        "中级医师",
+        "高级医师",
+        "实习护理",
+        "初级护理",
+        "中级护理",
+        "高级护理"
+      ],
+      "index": true,
+      "nullable": true
+    },
+    {
+      "name": "type",
+      "comment": "类型",
+      "type": "enum",
+      "option": ["医生", "护理人员", "临时工"],
+      "index": true
+    },
+    {
+      "name": "status",
+      "comment": "状态",
+      "type": "enum",
+      "option": ["休假中", "工作中", "出差中"],
+      "index": true
+    },
+    {
+      "name": "in",
+      "comment": "入职时间",
+      "type": "string"
+    },
+    {
+      "name": "cured",
+      "comment": "治愈宠物数",
+      "type": "integer"
+    },
+    {
+      "name": "salary",
+      "comment": "薪水",
+      "type": "integer"
+    }
+  ],
+  "relations": {
+    "pets": {
+      "type": "hasMany",
+      "model": "pet",
+      "key": "doctor_id",
+      "foreign": "id",
+      "query": { "select": ["id", "name"] }
+    }
+  },
+  "values": [],
+  "indexes": [],
+  "option": { "timestamps": true, "soft_deletes": true }
+}

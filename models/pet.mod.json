@@ -1,0 +1,92 @@
+{
+  "name": "Pet",
+  "table": { "name": "pet", "comment": "宠物表" },
+  "columns": [
+    { "name": "id", "comment": "ID", "type": "ID" },
+    {
+      "name": "name",
+      "comment": "昵称",
+      "type": "string",
+      "length": 80,
+      "index": true,
+      "nullable": true
+    },
+    {
+      "name": "type",
+      "comment": "类型",
+      "type": "enum",
+      "option": ["cat", "dog", "others"],
+      "index": true
+    },
+    {
+      "name": "status",
+      "comment": "入院状态",
+      "type": "enum",
+      "option": ["checked", "curing", "cured"],
+      "index": true
+    },
+    {
+      "name": "mode",
+      "comment": "状态",
+      "type": "enum",
+      "option": ["enabled", "disabled"],
+      "index": true
+    },
+    {
+      "name": "stay",
+      "comment": "入院时间",
+      "type": "integer"
+    },
+    {
+      "name": "cost",
+      "comment": "花费",
+      "type": "integer"
+    },
+    {
+      "name": "doctor_id",
+      "type": "json",
+      "comment": "相关职工",
+      "index": true
+    },
+    {
+      "name": "images",
+      "type": "json",
+      "comment": "相关图片"
+    },
+    {
+      "name": "test_string",
+      "comment": "测试字段（字符串）",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "name": "test_number",
+      "comment": "测试字段（数字）",
+      "type": "integer",
+      "nullable": true
+    },
+    {
+      "name": "test_array",
+      "comment": "测试字段（数组）",
+      "type": "json",
+      "nullable": true
+    }
+  ],
+  "relations": {
+    "doctor": {
+      "type": "hasMany",
+      "model": "doctor",
+      "key": "id",
+      "foreign": "doctor_id",
+      "query": {
+        "select": ["id", "nickname"]
+      }
+    }
+  },
+  "values": [],
+  "indexes": [],
+  "option": {
+    "timestamps": true,
+    "soft_deletes": true
+  }
+}
