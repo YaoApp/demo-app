@@ -2,10 +2,10 @@
   "name": "::Pet Admin",
 
   "action": {
-    "bind": { "model": "pet", "withs": { "doctor": {} } },
+    "bind": { "model": "pet", "option": { "withs": { "doctor": {} } } },
 
-    "before:search": "scripts.pet.AfterSearch",
-    "search": { "process": "models.pet.Search", "defaults": [null, 1, 10] },
+    "before:search": "scripts.pet.BeforeSearch",
+    "search": { "process": "scripts.pet.Search", "default": [null, 1, 15] },
     "after:search": "scripts.pet.AfterSearch",
 
     "save": {},
@@ -113,7 +113,7 @@
     }
   },
 
-  "fileds": {
+  "fields": {
     "filter": {
       "名称": {
         "bind": "where.name.like",
@@ -128,10 +128,7 @@
           "type": "Select",
           "props": {
             "xProps": {
-              "remote": {
-                "api": "/api/mock/Select",
-                "params": { "select": "label,value" }
-              }
+              "remote": ["models.pet.Select", { "select": "label,value" }]
             }
           }
         }
@@ -141,6 +138,7 @@
     "table": {
       "名称": {
         "bind": "name",
+        "in": "scripts.pet.SaveName",
         "view": { "type": "Text", "props": {} },
         "edit": {
           "type": "Input",
@@ -149,10 +147,14 @@
       },
       "入院状态": {
         "bind": "status",
+        "in": "scripts.pet.SaveTag",
+        "out": "scripts.pet.GetTag",
         "view": {
           "type": "Tag",
           "props": {
-            "remote": ["models.pet.Select", { "select": "label,value" }],
+            "xProps": {
+              "remote": ["models.pet.Select", { "select": "label,value" }]
+            },
             "pure": true
           }
         },

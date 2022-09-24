@@ -44,14 +44,15 @@
     },
     {
       "name": "doctor_id",
-      "type": "json",
+      "type": "integer",
       "comment": "相关职工",
-      "index": true
+      "nullable": true
     },
     {
       "name": "images",
       "type": "json",
-      "comment": "相关图片"
+      "comment": "相关图片",
+      "nullable": true
     },
     {
       "name": "test_string",
