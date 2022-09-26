@@ -128,7 +128,10 @@
           "type": "Select",
           "props": {
             "xProps": {
-              "remote": ["models.pet.Select", { "select": "label,value" }]
+              "$remote": {
+                "process": "models.pet.Get",
+                "query": { "select": "label,value" }
+              }
             }
           }
         }
@@ -153,7 +156,10 @@
           "type": "Tag",
           "props": {
             "xProps": {
-              "remote": ["models.pet.Select", { "select": "label,value" }]
+              "$remote": {
+                "process": "models.pet.Get",
+                "query": { "select": "label,value" }
+              }
             },
             "pure": true
           }
@@ -162,7 +168,10 @@
           "type": "Select",
           "props": {
             "xProps": {
-              "remote": ["models.pet.Select", { "select": "label,value" }]
+              "$remote": {
+                "process": "models.pet.Get",
+                "query": { "select": "label,value" }
+              }
             }
           }
         }
