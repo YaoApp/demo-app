@@ -1,0 +1,44 @@
+{
+  "name": "APP Menu",
+  "nodes": [],
+  "output": [
+    {
+      "blocks": 0,
+      "icon": "icon-activity",
+      "id": 1,
+      "name": "图表",
+      "parent": null,
+      "path": "/x/Chart/dashboard",
+      "visible_menu": 0
+    },
+    {
+      "blocks": 0,
+      "icon": "icon-package",
+      "id": 2,
+      "name": "表格",
+      "parent": null,
+      "path": "/x/Table/pet",
+      "visible_menu": 1,
+      "children": [
+        {
+          "blocks": 0,
+          "icon": "icon-package",
+          "name": "宠物列表",
+          "id": 2010,
+          "parent": 2,
+          "path": "/x/Table/pet",
+          "visible_menu": 1
+        },
+        {
+          "blocks": 0,
+          "icon": "icon-package",
+          "name": "用户列表",
+          "id": 2020,
+          "parent": 2,
+          "path": "/x/Table/user",
+          "visible_menu": 1
+        }
+      ]
+    }
+  ]
+}
