@@ -1,7 +1,7 @@
 {
   "name": "::Admin Login",
   "action": {
-    "process": "yao.admin.Login",
+    "process": "yao.login.Admin",
     "args": [":payload"]
   },
   "layout": {

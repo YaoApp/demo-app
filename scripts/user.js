@@ -4,5 +4,5 @@
  */
 function Login(payload) {
   log.Trace("[user] Login %s", payload.email);
-  return Process("yao.admin.Login", payload);
+  return Process("yao.login.Admin", payload);
 }
