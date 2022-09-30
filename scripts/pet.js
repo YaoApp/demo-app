@@ -15,7 +15,7 @@ function SaveName(field, value, row) {
  * @returns
  */
 function SaveTag(field, value, row) {
-  return value;
+  return value.label ? value.label : value;
 }
 
 /**

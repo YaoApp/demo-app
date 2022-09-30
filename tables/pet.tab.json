@@ -130,7 +130,7 @@
             "xProps": {
               "$remote": {
                 "process": "models.pet.Get",
-                "query": { "select": "label,value" }
+                "query": { "select": ["id", "name"] }
               }
             }
           }
@@ -158,7 +158,7 @@
             "xProps": {
               "$remote": {
                 "process": "models.pet.Get",
-                "query": { "select": "label,value" }
+                "query": { "select": ["id", "name"] }
               }
             },
             "pure": true
@@ -170,7 +170,7 @@
             "xProps": {
               "$remote": {
                 "process": "models.pet.Get",
-                "query": { "select": "label,value" }
+                "query": { "select": ["id", "name"] }
               }
             }
           }
