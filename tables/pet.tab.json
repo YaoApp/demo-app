@@ -8,6 +8,9 @@
     "search": { "process": "scripts.pet.Search", "default": [null, 1, 15] },
     "after:search": "scripts.pet.AfterSearch",
 
+    "find": { "guard": "-" },
+    "get": { "guard": "bearer-jwt,scripts.pet.Guard" },
+
     "save": {},
     "delete": {}
   },
