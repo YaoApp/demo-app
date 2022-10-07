@@ -1,6 +1,0 @@
-{
-  "name": "::User Admin",
-  "action": {
-    "bind": { "model": "user" }
-  }
-}

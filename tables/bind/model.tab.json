@@ -1,7 +1,7 @@
 {
-  "name": "::My Pet Admin",
+  "name": "::Pet Admin Bind Model",
   "action": {
-    "bind": { "table": "pet" },
+    "bind": { "model": "pet", "option": {} },
     "search": {
       "guard": "-",
       "process": "scripts.pet.Search",
