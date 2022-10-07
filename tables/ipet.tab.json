@@ -1,0 +1,11 @@
+{
+  "name": "::My Pet Admin",
+  "action": {
+    "bind": { "table": "pet" },
+    "search": {
+      "guard": "-",
+      "process": "scripts.pet.Search",
+      "default": [null, 1, 5]
+    }
+  }
+}
