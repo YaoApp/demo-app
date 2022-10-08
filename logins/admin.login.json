@@ -7,7 +7,7 @@
   "layout": {
     "entry": "/x/Chart/dashboard",
     "captcha": "yao.utils.Captcha",
-    "cover": "/images/login/cover.svg",
+    "cover": "/assets/images/login/cover.svg",
     "slogan": "::Make Your Dream With Yao App Engine",
     "site": "https://yaoapps.com"
   }
