@@ -118,10 +118,10 @@
       "收入_折线图": {
         "bind": "income",
         "link": "/x/Table/pet",
-        "cardStyle": { "padding": 0 },
         "view": {
           "type": "NumberChart",
           "props": {
+            "cardStyle": { "padding": 0 },
             "type": "line",
             "chartHeight": 120,
             "prefix": "¥",
@@ -134,10 +134,10 @@
       "支出_折线图": {
         "bind": "cost",
         "link": "/x/Table/pet",
-        "cardStyle": { "padding": 0 },
         "view": {
           "type": "NumberChart",
           "props": {
+            "cardStyle": { "padding": 0 },
             "type": "line",
             "chartHeight": 120,
             "color": "red",
@@ -151,10 +151,10 @@
       "综合评分_折线图": {
         "bind": "rate",
         "link": "/x/Table/pet",
-        "cardStyle": { "padding": 0 },
         "view": {
           "type": "NumberChart",
           "props": {
+            "cardStyle": { "padding": 0 },
             "type": "line",
             "chartHeight": 120,
             "color": "orange",
@@ -185,37 +185,33 @@
       "宠物数量_上月": {
         "bind": "prev_pet_count",
         "link": "/x/Table/pet",
-        "cardStyle": { "padding": 0 },
         "view": {
           "type": "Number",
-          "props": { "unit": "个", "prev_title": "上月数据" }
+          "props": { "cardStyle": { "padding": 0 }, "unit": "个", "prev_title": "上月数据" }
         }
       },
       "宠物类型_上月": {
         "bind": "prev_pet_type",
         "link": "/x/Table/pet",
-        "cardStyle": { "padding": 0 },
         "view": {
           "type": "Number",
-          "props": { "unit": "种", "prev_title": "上月数据" }
+          "props": {"cardStyle": { "padding": 0 }, "unit": "种", "prev_title": "上月数据" }
         }
       },
       "当月收入_上月": {
         "bind": "prev_income_monthly",
         "link": "/x/Table/pet",
-        "cardStyle": { "padding": 0 },
         "view": {
           "type": "Number",
-          "props": { "unit": "元", "prev_title": "上月数据" }
+          "props": {"cardStyle": { "padding": 0 }, "unit": "元", "prev_title": "上月数据" }
         }
       },
       "医师数量_上月": {
         "bind": "prev_doctor_count",
         "link": "/x/Table/pet",
-        "cardStyle": { "padding": 0 },
         "view": {
           "type": "Number",
-          "props": { "unit": "个", "prev_title": "上月数据" }
+          "props": {"cardStyle": { "padding": 0 }, "unit": "个", "prev_title": "上月数据" }
         }
       },
       "类型排布": {
