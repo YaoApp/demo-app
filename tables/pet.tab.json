@@ -43,11 +43,18 @@
     },
 
     "filter": {
-      "btnAddText": "新增宠物",
       "columns": [
         { "name": "名称", "width": 4 },
         { "name": "状态", "width": 4 }
-      ]
+      ],
+      "actions":[{
+            "title": "添加宠物",
+            "icon": "icon-plus",
+            "width":3,
+            "action": {
+              "Common.historyPush": { "pathname": "/x/Form/pet/0/edit" }
+            }
+      }]
     },
 
     "table": {
