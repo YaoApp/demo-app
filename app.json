@@ -1,7 +1,6 @@
 {
   "xgen": "1.0",
   "name": "::Demo Application",
-  "theme": "dark",
   "short": "::Demo",
   "description": "::Another yao application",
   "version": "0.10.2",
@@ -10,7 +9,6 @@
     "args": ["demo"]
   },
   "optional": {
-    "adminRoot": "admin",
     "hideNotification": true,
     "hideSetting": false
   }
