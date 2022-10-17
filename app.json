@@ -9,6 +9,7 @@
     "args": ["demo"]
   },
   "optional": {
+    "adminRoot": "admin",
     "hideNotification": true,
     "hideSetting": false
   }
