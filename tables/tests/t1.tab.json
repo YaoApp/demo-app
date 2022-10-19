@@ -1,0 +1,14 @@
+{
+  "name": "::Pet Admin",
+
+  "action": {
+    "bind": { "model": "pet", "option": { "withs": { "doctor": {} } } }
+  },
+
+  "layout": {
+    "primary": "id",
+    "header": {},
+    "filter": {},
+    "table": {}
+  }
+}

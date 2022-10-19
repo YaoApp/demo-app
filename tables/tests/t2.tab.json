@@ -1,0 +1,41 @@
+{
+  "name": "::Pet Admin",
+
+  "action": {
+    "bind": { "model": "pet", "option": { "withs": { "doctor": {} } } }
+  },
+
+  "layout": {
+    "primary": "id",
+
+    "header": {
+      "preset": {
+        "batch": { "deletable": true }
+      }
+    },
+
+    "filter": {
+      "columns": [],
+      "actions": [
+        {
+          "title": "添加宠物",
+          "icon": "icon-plus",
+          "width": 3,
+          "action": {
+            "Common.openModal": {
+              "width": 640,
+              "Form": { "type": "edit", "model": "pet" }
+            }
+          }
+        }
+      ]
+    },
+
+    "table": {
+      "operation": {
+        "fold": false,
+        "width": 255
+      }
+    }
+  }
+}
