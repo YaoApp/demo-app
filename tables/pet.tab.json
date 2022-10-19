@@ -32,14 +32,7 @@
           "name": "pet",
           "operation": [{ "title": "跳转", "link": "https://baidu.com" }]
         }
-      },
-      "actions": [
-        {
-          "title": "页面跳转",
-          "icon": "icon-airplay",
-          "props": { "type": "history.push", "payload": "/404" }
-        }
-      ]
+      }
     },
 
     "filter": {
@@ -53,26 +46,20 @@
           "icon": "icon-plus",
           "width": 3,
           "action": {
-            "Common.historyPush": { "pathname": "/x/Form/pet/0/edit" }
+            "Common.openModal": {
+                  "width": 640,
+                  "Form": { "type": "edit", "model": "pet" }
+            }
           }
         }
       ]
     },
 
     "table": {
-      "props": {
-        "scroll": { "x": 2700 }
-      },
       "columns": [
         { "name": "名称" },
         { "name": "消费金额" },
-        { "name": "入院状态" },
-        { "name": "名称" },
-        { "name": "消费金额" },
-        { "name": "状态" },
-        { "name": "名称" },
-        { "name": "消费金额" },
-        { "name": "状态" }
+        { "name": "入院状态" }
       ],
       "operation": {
         "fold": false,
