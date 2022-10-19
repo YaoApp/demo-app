@@ -11,9 +11,6 @@
   "adminRoot": "admin",
   "optional": {
     "hideNotification": true,
-    "hideSetting": false,
-    "layout": {
-      "full": true
-    }
+    "hideSetting": false
   }
 }
