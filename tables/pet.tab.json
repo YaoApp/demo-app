@@ -152,6 +152,7 @@
         "view": { "type": "Text", "props": {} },
         "edit": {
           "type": "Input",
+          "bind": "name",
           "props": { "placeholder": "请输入宠物名称" }
         }
       },
