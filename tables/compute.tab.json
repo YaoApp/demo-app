@@ -1,0 +1,251 @@
+{
+  "name": "::Pet Admin",
+  "config": { "full": true },
+  "action": {
+    "bind": { "model": "pet", "option": { "withs": { "doctor": {} } } },
+    "search": { "process": "scripts.pet.Search", "default": [null, 1, 15] },
+    "get": { "guard": "bearer-jwt,scripts.pet.Guard" }
+  },
+
+  "layout": {
+    "primary": "id",
+
+    "header": {
+      "preset": {
+        "batch": {
+          "columns": [
+            { "name": "名称", "width": 12 },
+            { "name": "消费金额", "width": 12 }
+          ],
+          "deletable": true
+        },
+        "import": {
+          "name": "pet",
+          "operation": [{ "title": "跳转", "link": "https://baidu.com" }]
+        }
+      }
+    },
+
+    "filter": {
+      "columns": [
+        { "name": "名称", "width": 4 },
+        { "name": "状态", "width": 4 }
+      ],
+      "actions": [
+        {
+          "title": "添加宠物",
+          "icon": "icon-plus",
+          "width": 3,
+          "action": {
+            "Common.openModal": {
+              "width": 640,
+              "Form": { "type": "edit", "model": "pet" }
+            }
+          }
+        }
+      ]
+    },
+
+    "table": {
+      "columns": [
+        { "name": "名称", "width": 100 },
+        { "name": "图集", "width": 200 },
+        { "name": "入院时间", "width": 100 },
+        { "name": "治疗状态", "width": 100 },
+        { "name": "消费金额", "width": 100 },
+        { "name": "是否在线", "width": 100 },
+        { "name": "创建时间", "width": 100 },
+        { "name": "状态", "width": 100 }
+      ],
+      "operation": {
+        "fold": false,
+        "width": 255,
+        "actions": [
+          {
+            "title": "查看",
+            "icon": "icon-eye",
+            "action": {
+              "Common.openModal": {
+                "width": 640,
+                "Form": { "type": "view", "model": "pet" }
+              }
+            }
+          },
+          {
+            "title": "编辑",
+            "icon": "icon-edit-2",
+            "action": {
+              "Common.openModal": {
+                "Form": { "type": "edit", "model": "pet" }
+              }
+            }
+          },
+          {
+            "title": "治愈",
+            "icon": "icon-check",
+            "action": {
+              "Table.save": { "id": ":id", "status": "cured" }
+            },
+            "style": "success",
+            "confirm": { "title": "提示", "desc": "确认变更为治愈状态？" }
+          },
+          {
+            "title": "查看详情",
+            "icon": "icon-book-open",
+            "action": {
+              "Common.historyPush": { "pathname": "/x/Form/pet/:id/edit" }
+            }
+          },
+          {
+            "title": "返回上一页",
+            "icon": "icon-arrow-left",
+            "action": { "Common.historyBack": {} }
+          },
+          {
+            "title": "删除",
+            "icon": "icon-trash-2",
+            "action": { "Table.delete": {} },
+            "style": "danger",
+            "confirm": {
+              "title": "提示",
+              "desc": "确认删除，删除后数据无法恢复？"
+            }
+          }
+        ]
+      }
+    }
+  },
+
+  "fields": {
+    "filter": {
+      "名称": {
+        "bind": "where.name.like",
+        "edit": {
+          "type": "Input",
+          "compute": "Trim",
+          "props": { "placeholder": "请输入宠物名称" }
+        }
+      },
+      "状态": {
+        "bind": "where.status.in",
+        "edit": {
+          "type": "Select",
+          "compute": "QueryString",
+          "props": {
+            "xProps": {
+              "$remote": {
+                "process": "models.pet.Get",
+                "query": { "select": ["id", "name"] }
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "table": {
+      "名称": {
+        "bind": "name",
+        "view": {
+          "type": "Text",
+          "compute": {
+            "process": "Concat",
+            "args": ["$C(row.type)", "\\::", "$C(value)", "-", "$C(row.status)"]
+          },
+          "props": {}
+        },
+        "edit": {
+          "type": "Input",
+          "props": { "placeholder": "请输入宠物名称" }
+        }
+      },
+
+      "图集": {
+        "bind": "images",
+        "view": { "type": "Image", "compute": "ImagesView", "props": {} },
+        "edit": {
+          "type": "Upload",
+          "compute": "ImagesEdit",
+          "props": { "filetype": "image" }
+        }
+      },
+
+      "入院时间": {
+        "bind": "stay",
+        "view": { "type": "Text", "compute": "Duration", "props": {} },
+        "edit": {
+          "type": "InputNumber",
+          "compute": "DayToSeconds",
+          "props": { "placeholder": "请输入院时间(单位:天)" }
+        }
+      },
+
+      "创建时间": {
+        "bind": "created_at",
+        "view": { "type": "Text", "compute": "HumanDataTime", "props": {} }
+      },
+
+      "治疗状态": {
+        "bind": "curing_status",
+        "view": {
+          "type": "Tag",
+          "compute": {
+            "process": "Mapping",
+            "args": [
+              "$C(value)",
+              { "0": "checked", "1": "curing", "2": "cured" }
+            ]
+          },
+          "props": {
+            "options": [
+              { "label": "::checked", "value": "checked" },
+              { "label": "::curing", "value": "curing" },
+              { "label": "::cured", "value": "cured" }
+            ]
+          }
+        },
+        "edit": {
+          "type": "Select",
+          "props": {
+            "options": [
+              { "label": "::checked", "value": "0" },
+              { "label": "::curing", "value": "1" },
+              { "label": "::cured", "value": "2" }
+            ]
+          }
+        }
+      },
+
+      "消费金额": {
+        "bind": "cost",
+        "view": {
+          "type": "Text",
+          "compute": "Currency",
+          "props": {}
+        },
+        "edit": { "type": "Input", "props": {} }
+      },
+
+      "是否在线": {
+        "bind": "online",
+        "view": {
+          "type": "Text",
+          "compute": {
+            "process": "scripts.compute.MappingOnline",
+            "args": ["$C(value)", "$C(props.mapping)"]
+          },
+          "props": { "mapping": { "1": "::Online", "0": "::Offline" } }
+        },
+        "edit": {
+          "type": "RadioGroup",
+          "props": {
+            "options": [
+              { "label": "::Offline", "value": "0" },
+              { "label": "::Online", "value": "1" }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

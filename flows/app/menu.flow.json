@@ -32,6 +32,15 @@
         {
           "blocks": 0,
           "icon": "icon-package",
+          "name": "数值计算",
+          "id": 2023,
+          "parent": 2,
+          "path": "/x/Table/compute",
+          "visible_menu": 1
+        },
+        {
+          "blocks": 0,
+          "icon": "icon-package",
           "name": "环境变量",
           "id": 2023,
           "parent": 2,

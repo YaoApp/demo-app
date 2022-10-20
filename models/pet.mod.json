@@ -33,6 +33,21 @@
       "index": true
     },
     {
+      "name": "online",
+      "comment": "是否在线",
+      "type": "boolean",
+      "default": false,
+      "index": true
+    },
+    {
+      "name": "curing_status",
+      "comment": "治疗状态",
+      "type": "enum",
+      "default": "0",
+      "option": ["0", "1", "2"],
+      "index": true
+    },
+    {
       "name": "stay",
       "comment": "入院时间",
       "type": "integer"
