@@ -19,13 +19,13 @@
           }
         },
         {
-          "title": "治愈",
+          "title": "治愈 {{name}}",
           "icon": "icon-check",
           "action": {
             "Table.save": { "id": ":id", "status": "cured" }
           },
           "style": "success",
-          "confirm": { "title": "提示", "desc": "确认变更为治愈状态？" }
+          "confirm": { "title": "提示", "desc": "确认变更为治愈状态？{{name}}" }
         }
       ]
     },
