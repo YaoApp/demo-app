@@ -160,6 +160,29 @@
         }
       },
 
+      "状态": {
+        "bind": "name",
+        "view": {
+          "type": "Text",
+          "compute": {
+            "process": "Concat",
+            "args": ["$C(value)", "-", "$C(row.status)"]
+          },
+          "props": {}
+        },
+        "edit": {
+          "type": "Select",
+          "bind": "status",
+          "props": {
+            "options": [
+              { "label": "::checked", "value": "checked" },
+              { "label": "::curing", "value": "curing" },
+              { "label": "::cured", "value": "cured" }
+            ]
+          }
+        }
+      },
+
       "图集": {
         "bind": "images",
         "view": { "type": "Image", "compute": "ImagesView", "props": {} },
