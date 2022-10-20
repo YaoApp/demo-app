@@ -103,7 +103,7 @@
         "in": "scripts.pet.SaveName",
         "edit": {
           "type": "Input",
-          "props": { "placeholder": "请输入宠物名称" }
+          "props": { "placeholder": "请输入宠物名称 {{id}}" }
         }
       },
       "类型": {
