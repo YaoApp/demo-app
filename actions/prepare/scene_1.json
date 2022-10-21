@@ -1,0 +1,38 @@
+{
+  "name": "SCENE 001",
+  "nodes": {
+    "start": {
+      "action": "Table.OpenModal",
+      "args": { "type": "edit", "model": "pet" },
+      "next": {
+        "onSaveSuccess": {
+          "node": "openUserForm",
+          "args": { "pet": "${{ res }}" }
+        },
+        "onSaveError": { "node": "openDocument", "args": { "doc_id": 1024 } }
+      }
+    },
+    "openUserForm": [
+      {
+        "action": "Common.historyPush",
+        "args": { "pathname": "/x/Table/user" }
+      },
+      {
+        "action": "Table.OpenModal",
+        "args": {
+          "type": "edit",
+          "model": "user",
+          "id": "${{ pet.user_id }}"
+        }
+      }
+    ],
+    "openDocument": {
+      "action": "Table.OpenModal",
+      "args": {
+        "type": "view",
+        "model": "document",
+        "id": "${{ doc_id }}"
+      }
+    }
+  }
+}
