@@ -8,5 +8,8 @@
  * @returns
  */
 function Bar(...args) {
-  return args;
+  return {
+    message: $L("Another yao application") + " (Cloud Function: foo.Bar)",
+    args: args,
+  };
 }

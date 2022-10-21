@@ -28,19 +28,22 @@
           "confirm": { "title": "提示", "desc": "确认变更为治愈状态？{{name}}" }
         },
         {
-            "title": "测试云函数",
-            "icon": "icon-cloud",
-            "action": {
-              "Service.test": { "method":"A","args":{"id":"{{id}}"} }
-            }
-          },
-          {
-            "title": "测试Studio",
-            "icon": "icon-layers",
-            "action": {
-              "Studio.test": { "method":"B","args":{"id":"{{id}}"} }
+          "title": "测试云函数",
+          "icon": "icon-cloud",
+          "action": {
+            "Service.foo": { "method": "Bar", "args": ["{{id}}", "{{name}}"] }
+          }
+        },
+        {
+          "title": "测试Studio",
+          "icon": "icon-layers",
+          "action": {
+            "Studio.hello": {
+              "method": "World",
+              "args": ["{{id}}", "{{name}}"]
             }
           }
+        }
       ]
     },
     "form": {
@@ -63,9 +66,7 @@
                 },
                 {
                   "title": "More",
-                  "columns": [
-                    { "name": "状态", "width": 12 }
-                  ]
+                  "columns": [{ "name": "状态", "width": 12 }]
                 }
               ]
             }
