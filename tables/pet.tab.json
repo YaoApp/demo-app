@@ -47,8 +47,8 @@
           "width": 3,
           "action": {
             "Common.openModal": {
-                  "width": 640,
-                  "Form": { "type": "edit", "model": "pet" }
+              "width": 640,
+              "Form": { "type": "edit", "model": "pet" }
             }
           }
         }
@@ -148,7 +148,6 @@
     "table": {
       "名称": {
         "bind": "name",
-        "in": "scripts.pet.SaveName",
         "view": { "type": "Text", "props": {} },
         "edit": {
           "type": "Input",
@@ -158,8 +157,6 @@
       },
       "入院状态": {
         "bind": "status",
-        "in": "scripts.pet.SaveTag",
-        "out": "scripts.pet.GetTag",
         "view": {
           "type": "Tag",
           "props": {
