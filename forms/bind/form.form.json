@@ -1,0 +1,6 @@
+{
+  "name": "::Pet Admin Bind Form",
+  "action": {
+    "bind": { "model": "pet", "option": {} }
+  }
+}

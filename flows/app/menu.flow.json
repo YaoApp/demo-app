@@ -13,7 +13,7 @@
     },
     {
       "blocks": 0,
-      "icon": "icon-package",
+      "icon": "icon-book",
       "id": 2,
       "name": "表格",
       "parent": null,
@@ -22,7 +22,7 @@
       "children": [
         {
           "blocks": 0,
-          "icon": "icon-package",
+          "icon": "icon-book",
           "name": "宠物列表",
           "id": 2010,
           "parent": 2,
@@ -31,7 +31,7 @@
         },
         {
           "blocks": 0,
-          "icon": "icon-package",
+          "icon": "icon-book",
           "name": "数值计算",
           "id": 2023,
           "parent": 2,
@@ -40,7 +40,7 @@
         },
         {
           "blocks": 0,
-          "icon": "icon-package",
+          "icon": "icon-book",
           "name": "环境变量",
           "id": 2023,
           "parent": 2,
@@ -49,7 +49,7 @@
         },
         {
           "blocks": 0,
-          "icon": "icon-package",
+          "icon": "icon-book",
           "name": "会话数据",
           "id": 2023,
           "parent": 2,
@@ -58,7 +58,7 @@
         },
         {
           "blocks": 0,
-          "icon": "icon-package",
+          "icon": "icon-book",
           "name": "绑定模型",
           "id": 2021,
           "parent": 2,
@@ -67,7 +67,7 @@
         },
         {
           "blocks": 0,
-          "icon": "icon-package",
+          "icon": "icon-book",
           "name": "绑定表单",
           "id": 2022,
           "parent": 2,
@@ -76,11 +76,94 @@
         },
         {
           "blocks": 0,
-          "icon": "icon-package",
+          "icon": "icon-book",
           "name": "绑定表格",
           "id": 2023,
           "parent": 2,
           "path": "/x/Table/bind.table",
+          "visible_menu": 1
+        }
+      ]
+    },
+    {
+      "blocks": 0,
+      "icon": "icon-clipboard",
+      "id": 2,
+      "name": "表单",
+      "parent": null,
+      "path": "/x/Form/pet/1/edit",
+      "visible_menu": 1,
+      "children": [
+        {
+          "blocks": 0,
+          "icon": "icon-clipboard",
+          "name": "编辑模式",
+          "id": 2010,
+          "parent": 2,
+          "path": "/x/Form/pet/1/edit",
+          "visible_menu": 1
+        },
+        {
+          "blocks": 0,
+          "icon": "icon-clipboard",
+          "name": "查看模式",
+          "id": 2010,
+          "parent": 2,
+          "path": "/x/Form/pet/1/view",
+          "visible_menu": 1
+        },
+        {
+          "blocks": 0,
+          "icon": "icon-clipboard",
+          "name": "数值计算",
+          "id": 2023,
+          "parent": 2,
+          "path": "/x/Form/compute/1/edit",
+          "visible_menu": 1
+        },
+        {
+          "blocks": 0,
+          "icon": "icon-clipboard",
+          "name": "环境变量",
+          "id": 2023,
+          "parent": 2,
+          "path": "/x/Form/env/1/edit",
+          "visible_menu": 1
+        },
+        {
+          "blocks": 0,
+          "icon": "icon-clipboard",
+          "name": "会话数据",
+          "id": 2023,
+          "parent": 2,
+          "path": "/x/Form/session/xxx/edit",
+          "visible_menu": 1
+        },
+        {
+          "blocks": 0,
+          "icon": "icon-clipboard",
+          "name": "绑定模型",
+          "id": 2021,
+          "parent": 2,
+          "path": "/x/Form/bind.model/1/edit",
+          "visible_menu": 1
+        },
+        {
+          "blocks": 0,
+          "icon": "icon-clipboard",
+          "name": "绑定表格",
+          "id": 2023,
+          "parent": 2,
+          "path": "/x/Form/bind.table/1/edit",
+          "visible_menu": 1
+        },
+        {
+          "blocks": 0,
+          "icon": "icon-clipboard",
+          "name": "绑定表单",
+          "id": 2022,
+          "parent": 2,
+          "path": "/x/Form/bind.form/1/edit",
           "visible_menu": 1
         }
       ]
