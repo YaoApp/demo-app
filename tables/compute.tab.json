@@ -318,10 +318,11 @@
       "是否在线": {
         "bind": "online",
         "view": {
+          "bind": "online_view",
           "type": "Text",
           "compute": {
             "process": "scripts.compute.MappingOnline",
-            "args": ["$C(value)", "$C(props.mapping)"]
+            "args": ["$C(row.online)", "$C(props.mapping)"]
           },
           "props": { "mapping": { "1": "::Online", "0": "::Offline" } }
         },
@@ -329,8 +330,8 @@
           "type": "RadioGroup",
           "props": {
             "options": [
-              { "label": "::Offline", "value": "0" },
-              { "label": "::Online", "value": "1" }
+              { "label": "::Online", "value": true },
+              { "label": "::Offline", "value": false }
             ]
           }
         }

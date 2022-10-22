@@ -1,4 +1,6 @@
 function MappingOnline(value, mapping) {
+  v = value ? "1" : "0";
   mapping = mapping || {};
-  return mapping[value] || `not-found`;
+  // console.log(mapping, $L(mapping[v]));
+  return $L(mapping[v]) || `not-found`;
 }
