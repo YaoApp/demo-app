@@ -5,7 +5,7 @@
     "search": {
       "guard": "-",
       "process": "scripts.pet.Search",
-      "default": [null, 1, 5]
+      "default": [null, 1, 2]
     }
   }
 }
