@@ -19,10 +19,7 @@
     },
 
     "filter": {
-      "columns": [
-        { "name": "时间区间", "width": 6 },
-        { "name": "状态", "width": 6 }
-      ]
+      "columns": [{ "name": "时间区间", "width": 6 }]
     },
 
     "chart": {
@@ -62,7 +59,7 @@
             "xProps": {
               "$remote": {
                 "process": "models.pet.Get",
-                "query": { "select": ["name", "status"], "limit": 2 }
+                "query": { "select": "name,status", "limit": 2 }
               }
             }
           }
@@ -187,7 +184,11 @@
         "link": "/x/Table/pet",
         "view": {
           "type": "Number",
-          "props": { "cardStyle": { "padding": 0 }, "unit": "个", "prev_title": "上月数据" }
+          "props": {
+            "cardStyle": { "padding": 0 },
+            "unit": "个",
+            "prev_title": "上月数据"
+          }
         }
       },
       "宠物类型_上月": {
@@ -195,7 +196,11 @@
         "link": "/x/Table/pet",
         "view": {
           "type": "Number",
-          "props": {"cardStyle": { "padding": 0 }, "unit": "种", "prev_title": "上月数据" }
+          "props": {
+            "cardStyle": { "padding": 0 },
+            "unit": "种",
+            "prev_title": "上月数据"
+          }
         }
       },
       "当月收入_上月": {
@@ -203,7 +208,11 @@
         "link": "/x/Table/pet",
         "view": {
           "type": "Number",
-          "props": {"cardStyle": { "padding": 0 }, "unit": "元", "prev_title": "上月数据" }
+          "props": {
+            "cardStyle": { "padding": 0 },
+            "unit": "元",
+            "prev_title": "上月数据"
+          }
         }
       },
       "医师数量_上月": {
@@ -211,7 +220,11 @@
         "link": "/x/Table/pet",
         "view": {
           "type": "Number",
-          "props": {"cardStyle": { "padding": 0 }, "unit": "个", "prev_title": "上月数据" }
+          "props": {
+            "cardStyle": { "padding": 0 },
+            "unit": "个",
+            "prev_title": "上月数据"
+          }
         }
       },
       "类型排布": {
