@@ -226,7 +226,7 @@
         "edit": {
           "type": "Upload",
           "compute": "ImagesEdit",
-          "props": { "filetype": "image" }
+          "props": { "api":"/api/__yao/upload_test","filetype": "image","maxCount":6 }
         }
       },
 
