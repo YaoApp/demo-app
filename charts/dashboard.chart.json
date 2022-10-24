@@ -1,6 +1,8 @@
 {
   "name": "宠物医院数据图表",
 
+  "config":{"full":false},
+
   "action": {
     "before:data": "scripts.stat.BeforeData",
     "data": { "process": "scripts.stat.Data", "default": ["2022-09-20"] },

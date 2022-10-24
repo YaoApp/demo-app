@@ -148,10 +148,10 @@
     "table": {
       "名称": {
         "bind": "name",
-        "view": { "type": "Text", "props": {} },
+        "view": {"bind": "cost", "type": "Text", "props": {} },
         "edit": {
           "type": "Input",
-          "bind": "name",
+          "bind": "cost",
           "props": { "placeholder": "请输入宠物名称 {{id}}" }
         }
       },
