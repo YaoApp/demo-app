@@ -8,6 +8,7 @@
     "process": "flows.app.menu",
     "args": ["demo"]
   },
+  "setup": "scripts.demo.Data",
   "adminRoot": "admin",
   "optional": {
     "hideNotification": true,
