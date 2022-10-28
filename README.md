@@ -4,22 +4,31 @@ Demo YAO App (Required YAO v0.10.2-beta)
 
 ## Yao 0.10.2 Download
 
-Linux
+### Linux
 
-https://github.com/YaoApp/yao/actions/runs/3317780174
+https://github.com/YaoApp/yao/actions/runs/3346393661
 
-MacOS
+### MacOS
 
-https://github.com/YaoApp/yao/actions/runs/3317780577
+https://github.com/YaoApp/yao/actions/runs/3346394132
+
+### Docker
+
+```bash
+docker run -d  --name yao-0.10.2 -p 5099:5099 yaoapp/yao:0.10.2-amd64-dev
+docker exec -it  yao-0.10.2 /bin/bash
+```
+
+```bash
+yao start
+```
 
 ## Install
 
 ```bash
-yao migrate
-yao run scripts.demo.Data
+yao get yaoapp/demo-app
+yao start
 ```
-
-https://github.com/YaoApp/website-doc-zh-CN/blob/master/%E4%BB%8B%E7%BB%8D/%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97.mdx
 
 ## New Features
 
@@ -118,4 +127,18 @@ Script FS
 var fs = new FS("script"); // /app_root (!/app_root/scripts)
 var data = fs.ReadFile("/test.js"); // /app_root/scripts/test.js
 return data;
+```
+
+### Yao Get CLI
+
+```bash
+cd project_root
+yao get yaoapp/demo-app
+```
+
+### Setup UI
+
+```bash
+cd project_root
+yao start
 ```
