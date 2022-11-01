@@ -168,7 +168,9 @@
               "\\::",
               "$C(row.name)",
               "-",
-              "$C(row.status)"
+              "$C(row.status)",
+              "-",
+              "$C(id)"
             ]
           },
           "props": {}
@@ -226,7 +228,11 @@
         "edit": {
           "type": "Upload",
           "compute": "ImagesEdit",
-          "props": { "api":"/api/__yao/upload_test","filetype": "image","maxCount":6 }
+          "props": {
+            "api": "/api/__yao/upload_test",
+            "filetype": "image",
+            "maxCount": 6
+          }
         }
       },
 
