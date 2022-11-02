@@ -1,17 +1,19 @@
 {
-  "xgen": "1.0",
-  "name": "::Demo Application",
-  "short": "::Demo",
-  "description": "::Another yao application",
-  "version": "0.10.2",
-  "menu": {
-    "process": "flows.app.menu",
-    "args": ["demo"]
-  },
-  "setup": "scripts.demo.Data",
-  "adminRoot": "admin",
-  "optional": {
-    "hideNotification": true,
-    "hideSetting": false
-  }
+      "xgen": "1.0",
+      "name": "::Demo Application",
+      "short": "::Demo",
+      "description": "::Another yao application",
+      "version": "0.10.2",
+      "setup": "scripts.demo.Data",
+      "adminRoot": "admin",
+      "optional": {
+            "hideNotification": true,
+            "hideSetting": false
+      },
+      "menu": {
+            "process": "flows.app.menu",
+            "args": [
+                  "demo"
+            ]
+      }
 }
