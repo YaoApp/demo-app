@@ -117,8 +117,10 @@
                   "时间区间": {
                         "bind": "range",
                         "edit": {
-                              "type": "RangePicker",
-                              "props": {}
+                              "type": "TimePicker",
+                              "props": {
+                                    "range":true
+                              }
                         }
                   },
                   "状态": {
