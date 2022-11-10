@@ -1,0 +1,4 @@
+{
+  "name": "::Admin",
+  "action": { "bind": { "model": "xiang.user" } }
+}

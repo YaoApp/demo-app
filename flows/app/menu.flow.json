@@ -82,6 +82,15 @@
           "parent": 2,
           "path": "/x/Table/bind.table",
           "visible_menu": 1
+        },
+        {
+          "blocks": 0,
+          "icon": "icon-book",
+          "name": "管理员",
+          "id": 2023,
+          "parent": 2,
+          "path": "/x/Table/admin",
+          "visible_menu": 1
         }
       ]
     },
@@ -164,6 +173,15 @@
           "id": 2022,
           "parent": 2,
           "path": "/x/Form/bind.form/1/edit",
+          "visible_menu": 1
+        },
+        {
+          "blocks": 0,
+          "icon": "icon-clipboard",
+          "name": "管理员",
+          "id": 2022,
+          "parent": 2,
+          "path": "/x/Form/admin/1/edit",
           "visible_menu": 1
         }
       ]
