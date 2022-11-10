@@ -6,11 +6,11 @@ Demo YAO App (Required YAO v0.10.2-beta)
 
 ### Linux
 
-https://github.com/YaoApp/yao/actions/runs/3346393661
+https://github.com/YaoApp/yao/actions/runs/3435594671
 
 ### MacOS
 
-https://github.com/YaoApp/yao/actions/runs/3346394132
+https://github.com/YaoApp/yao/actions/runs/3435595521
 
 ### Docker
 
