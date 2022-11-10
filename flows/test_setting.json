@@ -1,0 +1,65 @@
+{
+      "label": "配置",
+      "version": "1.0.0",
+      "description": "配置",
+      "nodes": [],
+      "output": {
+            "columns": {
+                  "采购单价": {
+                        "bind": "price",
+                        "edit": {
+                              "type": "Input",
+                              "props": {}
+                        }
+                  },
+                  "采购数量": {
+                        "bind": "number",
+                        "edit": {
+                              "type": "InputNumber",
+                              "props": {}
+                        }
+                  },
+                  "采购类别": {
+                        "bind": "type",
+                        "edit": {
+                              "type": "Select",
+                              "props": {
+                                    "options": [
+                                          {
+                                                "label": "a",
+                                                "value": "a"
+                                          },
+                                          {
+                                                "label": "b",
+                                                "value": "b"
+                                          },
+                                          {
+                                                "label": "c",
+                                                "value": "c"
+                                          }
+                                    ]
+                              }
+                        }
+                  }
+            },
+            "list": {
+                  "primary": "id",
+                  "layout": {
+                        "columns": [
+                              {
+                                    "name": "采购单价",
+                                    "width": 8
+                              },
+                              {
+                                    "name": "采购数量",
+                                    "width": 8
+                              },
+                              {
+                                    "name": "采购类别",
+                                    "width": 8
+                              }
+                        ]
+                  }
+            }
+      }
+}
