@@ -2,6 +2,8 @@
 
 Demo YAO App (Required YAO v0.10.2-beta)
 
+Docs: https://github.com/YaoApp/website-doc-zh-CN/tree/v0.10.2/%E5%9F%BA%E7%A1%80
+
 ## Yao 0.10.2 Download
 
 ### Linux
