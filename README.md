@@ -2,15 +2,17 @@
 
 Demo YAO App (Required YAO v0.10.2-beta)
 
+Docs: https://github.com/YaoApp/website-doc-zh-CN/tree/v0.10.2/%E5%9F%BA%E7%A1%80
+
 ## Yao 0.10.2 Download
 
 ### Linux
 
-https://github.com/YaoApp/yao/actions/runs/3346393661
+https://github.com/YaoApp/yao/actions/runs/3435594671
 
 ### MacOS
 
-https://github.com/YaoApp/yao/actions/runs/3346394132
+https://github.com/YaoApp/yao/actions/runs/3435595521
 
 ### Docker
 
