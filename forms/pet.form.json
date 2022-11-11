@@ -148,7 +148,7 @@
                                           "width": 8
                                     },
                                     {
-                                          "name": "关联人员",
+                                          "name": "List测试",
                                           "width": 24
                                     }
                               ]
@@ -247,12 +247,12 @@
                               "props": {}
                         }
                   },
-                  "关联人员": {
-                        "bind": "doctor_id",
+                  "List测试": {
+                        "bind": "test_array",
                         "edit": {
-                              "type": "DynamicList",
+                              "type": "List",
                               "props": {
-                                    "setting":"test/setting"
+                                    "name": "test"
                               }
                         }
                   }
