@@ -8,11 +8,11 @@ Docs: https://github.com/YaoApp/website-doc-zh-CN/tree/v0.10.2/%E5%9F%BA%E7%A1%8
 
 ### Linux
 
-https://github.com/YaoApp/yao/actions/runs/3438088361
+https://github.com/YaoApp/yao/actions/runs/3442751955
 
 ### MacOS
 
-https://github.com/YaoApp/yao/actions/runs/3438089288
+https://github.com/YaoApp/yao/actions/runs/3442752425
 
 ### Docker
 
