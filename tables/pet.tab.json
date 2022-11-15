@@ -83,6 +83,7 @@
     "table": {
       "columns": [
         { "name": "名称" },
+        { "name": "相关图片" },
         { "name": "消费金额" },
         { "name": "入院状态" }
       ],
@@ -207,6 +208,17 @@
           "bind": "cost",
           "props": {
             "placeholder": "请输入宠物名称 {{id}}"
+          }
+        }
+      },
+      "相关图片": {
+        "bind": "images",
+        "view": { "type": "Image" },
+        "edit": {
+          "type": "Upload",
+          "props": {
+            "filetype": "image",
+            "$api": { "process": "fs.system.Upload" }
           }
         }
       },
