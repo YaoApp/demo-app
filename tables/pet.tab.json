@@ -213,9 +213,10 @@
       },
       "相关图片": {
         "bind": "images",
-        "view": { "type": "Image" },
+        "view": { "type": "Image", "compute": "Download" },
         "edit": {
           "type": "Upload",
+          "compute": "Upload",
           "props": {
             "filetype": "image",
             "$api": { "process": "fs.system.Upload" }
