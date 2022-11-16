@@ -256,7 +256,8 @@
         "edit": {
           "type": "List",
           "props": {
-            "name": "test"
+            "name": "test",
+            "showLabel":false
           }
         }
       }
